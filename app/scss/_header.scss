@@ -1,0 +1,146 @@
+.header {
+  &__image {
+    background-image: url(/app/images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 32.25rem;
+    position: relative;
+
+    @include breakpoint-up(medium) {
+      background-image: url(/app/images/desktop/image-header.jpg);
+      min-height: 40rem;
+    }
+  }
+
+  nav {
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 1rem;
+  }
+
+  &__logo_and_menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__toggle {
+    > span {
+      display: block;
+      height: 0.125rem;
+      width: 1.625rem;
+      background-color: $white;
+      transition: all 300ms ease-in-out;
+      transform-origin: 0 0;
+
+      &:not(:last-child) {
+        margin-bottom: 0.375rem;
+      }
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-family: $fraunces;
+    font-size: 2.5625rem;
+    letter-spacing: 0.4375rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 4.6875rem;
+    margin-bottom: 3rem;
+  }
+  &__arow {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include breakpoint-up(medium) {
+        margin-top: 4.0625rem;
+      }
+    }
+  }
+  &__mobile_menu {
+    background: $white;
+    padding: 1.625rem;
+    position: absolute;
+    width: calc(100% - 3.625rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    :hover {
+      background-color: $yellow;
+      color: $veryDarkBlue;
+      text-transform: uppercase;
+      font-family: $fraunces;
+      font-size: 15px;
+      border-radius: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+      transition: color 300ms ease-in-out;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: $darkGrayishBlue;
+      padding: 1rem;
+      font-family: $barlow;
+    }
+  }
+
+  &__mobile_shape {
+    width: 0;
+    height: 0;
+    margin-left: auto;
+    border-left: 50px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 50px solid rgb(255, 255, 255);
+  }
+
+  &__mobile_shape_parent {
+    padding-right: 1rem;
+    margin-bottom: -1rem;
+  }
+
+  .open {
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      transform: scaleX(0);
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(-3px, 0);
+    }
+  }
+
+  &__desktop {
+    a {
+      text-decoration: none;
+      color: $white;
+      padding: 0.75rem;
+      font-size: large;
+
+      &:hover {
+        background-color: $white;
+        color: $veryDarkBlue;
+        text-transform: uppercase;
+        font-family: $fraunces;
+        font-size: 15px;
+        border-radius: 50px;
+
+        transition: color 500ms ease-in-out;
+      }
+    }
+  }
+}

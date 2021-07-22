@@ -1,0 +1,395 @@
+.section-one {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+    .texts {
+      margin-top: 3.75rem;
+      margin-left: 2.6875rem;
+      margin-right: 2.6875rem;
+      margin-bottom: 3.125rem;
+      font-size: 1.25rem;
+      @include breakpoint-up(large) {
+        margin-left: 10.6875rem;
+        margin-right: 10.6875rem;
+      }
+    }
+
+    h2 {
+      font-family: $fraunces;
+      font-weight: 900;
+      color: $veryDarkBlue;
+    }
+
+    p {
+      color: $darkGrayishBlue;
+      font-family: $barlow;
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+    }
+
+    .learn_more {
+      position: relative;
+
+      h5 {
+        text-transform: uppercase;
+        font-family: "Fraunces";
+        color: $veryDarkBlue;
+      }
+
+      .text_underline {
+        width: 8.125rem;
+        height: 0.625rem;
+        background-color: $yellow;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        border-radius: 1.25rem;
+
+        @include breakpoint-up(medium) {
+          margin-left: -6px;
+          margin-top: -34px;
+          position: unset;
+          top: unset;
+          left: unset;
+          transform: unset;
+        }
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    background-image: url("/app/images/mobile/image-transform.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 16.25rem;
+
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-transform.jpg");
+      flex: 1;
+      height: 31.25rem;
+    }
+  }
+}
+
+.section-two {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__image {
+    background-image: url("/app//images/mobile/image-stand-out.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 16.25rem;
+
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-stand-out.jpg");
+      flex: 1;
+      height: 31.25rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    .texts {
+      margin-top: 3.75rem;
+      margin-left: 2.6875rem;
+      margin-right: 2.6875rem;
+      margin-bottom: 3.125rem;
+      font-size: 1.25rem;
+      @include breakpoint-up(large) {
+        margin-left: 10.6875rem;
+        margin-right: 10.6875rem;
+      }
+    }
+
+    h2 {
+      font-family: $fraunces;
+      font-weight: 900;
+      color: $veryDarkBlue;
+    }
+
+    p {
+      color: $darkGrayishBlue;
+      font-family: $barlow;
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+    }
+
+    .learn_more {
+      position: relative;
+
+      h5 {
+        text-transform: uppercase;
+        font-family: "Fraunces";
+        color: $veryDarkBlue;
+      }
+
+      .text_underline {
+        width: 8.125rem;
+        height: 0.625rem;
+        background-color: $softRed;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        border-radius: 1.25rem;
+
+        @include breakpoint-up(medium) {
+          margin-left: -6px;
+          margin-top: -34px;
+          position: unset;
+          top: unset;
+          left: unset;
+          transform: unset;
+        }
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1;
+      text-align: left;
+    }
+  }
+}
+
+.section-three {
+  @include breakpoint-up(medium) {
+    display: flex;
+  }
+
+  &__image-one {
+    background-image: url("/app/images/mobile/image-graphic-design.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 35rem;
+    position: relative;
+
+    .texts {
+      text-align: center;
+      margin-top: 3.75rem;
+      margin-left: 2.6875rem;
+      margin-right: 2.6875rem;
+      margin-bottom: 3.125rem;
+      font-size: 1.25rem;
+      position: absolute;
+      bottom: 0;
+      @include breakpoint-up(large) {
+        margin-left: 10.6875rem;
+        margin-right: 10.6875rem;
+      }
+    }
+
+    h2 {
+      font-family: $fraunces;
+      font-weight: 900;
+      color: $veryDarkBlue;
+    }
+
+    p {
+      color: $veryDarkBlue;
+      font-family: $barlow;
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1;
+      background-image: url("/app/images/desktop/image-graphic-design.jpg");
+    }
+  }
+
+  &__image-two {
+    background-image: url("/app/images/mobile/image-photography.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 35rem;
+    position: relative;
+
+    .texts {
+      text-align: center;
+      margin-top: 3.75rem;
+      margin-left: 2.6875rem;
+      margin-right: 2.6875rem;
+      margin-bottom: 3.125rem;
+      font-size: 1.25rem;
+      position: absolute;
+      bottom: 0;
+
+      @include breakpoint-up(large) {
+        margin-left: 10.6875rem;
+        margin-right: 10.6875rem;
+      }
+    }
+
+    h2 {
+      font-family: $fraunces;
+      font-weight: 900;
+      color: $veryDarkBlue;
+    }
+
+    p {
+      color: $veryDarkBlue;
+      font-family: $barlow;
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1;
+      background-image: url("/app/images/desktop/image-photography.jpg");
+    }
+  }
+}
+
+.client-testimonials {
+  &__head {
+    margin-top: 3.125rem;
+    margin-left: 2.1875rem;
+    margin-right: 2.1875rem;
+
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      color: $darkGrayishBlue;
+      letter-spacing: 0.3125rem;
+      font-family: $fraunces;
+    }
+  }
+
+  &__container {
+    @include breakpoint-up(medium) {
+      display: flex;
+      margin-right: 4.6875rem;
+      margin-left: 4.6875rem;
+    }
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .testimonial-image {
+      img {
+        border-radius: 50%;
+        width: 3.75rem;
+        margin-top: 3.125rem;
+      }
+    }
+
+    .testimonial-texts {
+      text-align: center;
+      h5 {
+        margin: 2.1875rem;
+
+        color: $darkGrayishBlue;
+        font-size: 17px;
+        line-height: 25px;
+        font-family: $barlow;
+      }
+
+      h4 {
+        font-family: $fraunces;
+        font-weight: 900;
+        color: $veryDarkBlue;
+        margin-bottom: 0.625rem;
+      }
+
+      p {
+        color: $darkGrayishBlue;
+        font-size: 0.875rem;
+        font-family: $barlow;
+        margin: 0;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1;
+    }
+  }
+}
+
+.section-four {
+  margin-top: 4.6875rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image-one {
+    background-image: url("/app/images/mobile/image-gallery-milkbottles.jpg");
+    min-height: 12.5rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 50%;
+
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-gallery-milkbottles.jpg");
+      flex: 1;
+      min-height: 22.5rem;
+    }
+  }
+
+  &__image-two {
+    background-image: url("/app/images/mobile/image-gallery-orange.jpg");
+    min-height: 12.5rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 50%;
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-gallery-orange.jpg");
+      flex: 1;
+      min-height: 22.5rem;
+    }
+  }
+
+  &__image-three {
+    background-image: url("/app/images/mobile/image-gallery-cone.jpg");
+    min-height: 12.5rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 50%;
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-gallery-cone.jpg");
+      flex: 1;
+      min-height: 22.5rem;
+    }
+  }
+
+  &__image-four {
+    background-image: url("/app/images/mobile/image-gallery-sugar-cubes.jpg");
+    min-height: 12.5rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 50%;
+    @include breakpoint-up(medium) {
+      background-image: url("/app/images/desktop/image-gallery-sugarcubes.jpg");
+      flex: 1;
+      min-height: 22.5rem;
+    }
+  }
+}
